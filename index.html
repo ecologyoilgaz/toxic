@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chemicals & Hazardous Waste Map — Claimed vs Actual</title>
+<meta name="description" content="Open database of toxic sites: POPs, PFAS, mercury, pesticides, radioactive waste. Verified via IPEN/Arnika, Basel Convention, satellite data.">
+<link rel="icon" href="chemicals-icon-loss.png" type="image/png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo"><img src="chemicals-logo.png" alt="Chemicals Logo"> Chemicals & Toxic Map</div>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="map.html">Map</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="rwa.html">RWA & Liquidity</a>
+    <a href="eco-token.html">ECO Token</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="tokens.html">Tokens & Pay</a>
+    <a href="treasury.html">Treasury</a>
+    <a href="signal.html">Signal</a>
+    <a href="response.html">Right of Reply</a>
+  </nav>
+</header>
+<main>
+  <section class="hero">
+    <h1>Chemicals: <span class="red">Claimed</span> vs <span class="green">Actual</span></h1>
+    <p>Open database of toxic sites: POPs, PFAS, mercury, pesticides, radioactive waste. Verified via IPEN/Arnika, Basel Convention, and satellite data. No source — no publication.</p>
+  </section>
+
+  <section id="live-counters"></section>
+  <section class="stats" id="stats"></section>
+  
+  <div class="filters">
+    <select id="filter-status">
+      <option value="">All statuses</option>
+      <option value="red">🔴 Gap confirmed</option>
+      <option value="green">🟢 Verified</option>
+      <option value="gray">⚫ Pending</option>
+    </select>
+    <select id="filter-region">
+      <option value="">All regions</option>
+      <option>Africa</option><option>Asia</option><option>Central Asia</option>
+      <option>Europe</option><option>North America</option><option>South America</option>
+      <option>Oceania</option><option>Middle East</option><option>Global</option>
+    </select>
+    <input id="filter-search" type="search" placeholder="Search site, chemical...">
+  </div>
+  
+  <div class="legend">
+    <span><i class="dot red"></i> 🔴 Gap confirmed</span>
+    <span><i class="dot green"></i> 🟢 Verified</span>
+    <span><i class="dot gray"></i> ⚫ Pending verification</span>
+  </div>
+  
+  <section id="cards" class="grid"></section>
+  <div id="pagination" class="pagination"></div>
+
+  <!-- CENTRAL ASIA CHEMICALS REPORTS -->
+  <section class="detail-block" style="border-left: 4px solid var(--green); margin-top: 50px;">
+    <h2>Central Asia Chemicals & Toxic Reports</h2>
+    <p style="color:var(--muted); margin-bottom: 20px;">
+      In-depth reports on toxic and hazardous sites in Central Asia. 
+      Each report covers contamination, health impacts, damage in USD, and short-term solutions.
+    </p>
+    <table style="width:100%;">
+      <thead><tr><th>Country / Site</th><th>Focus</th><th>Health Cost (USD)</th><th>Report</th></tr></thead>
+      <tbody>
+        <tr><td>Uzbekistan — Fergana Pesticides</td><td>Legacy pesticide stockpiles</td><td>$100M</td><td><a href="report-chemicals-uz.html" class="btn-primary" style="padding:4px 10px;font-size:12px;margin-top:0;">Read Report →</a></td></tr>
+        <tr><td>Kazakhstan — Chimkent Phosphogypsum</td><td>Phosphogypsum stacks, fluoride</td><td>$300M</td><td><a href="report-chemicals-kz.html" class="btn-primary" style="padding:4px 10px;font-size:12px;margin-top:0;">Read Report →</a></td></tr>
+        <tr><td>Kyrgyzstan — Khaidarkan Mercury</td><td>Mercury mining legacy</td><td>$200M</td><td><a href="report-chemicals-kg.html" class="btn-primary" style="padding:4px 10px;font-size:12px;margin-top:0;">Read Report →</a></td></tr>
+        <tr><td>Tajikistan — Obsolete Pesticides</td><td>~200 mini-landfills</td><td>$150M</td><td><a href="report-chemicals-tj.html" class="btn-primary" style="padding:4px 10px;font-size:12px;margin-top:0;">Read Report →</a></td></tr>
+        <tr><td>Turkmenistan — Data Gap</td><td>No public data on toxic sites</td><td>$50M (low conf.)</td><td><a href="report-chemicals-tm.html" class="btn-primary" style="padding:4px 10px;font-size:12px;margin-top:0;">Read Report →</a></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- IFI TRACKER -->
+  <section class="detail-block" style="border-left: 4px solid var(--green); margin-top: 50px;">
+    <h2>Global Chemicals Projects (IFI Tracker)</h2>
+    <table style="width:100%;">
+      <thead><tr><th>Institution</th><th>Project</th><th>Focus</th><th>Link</th></tr></thead>
+      <tbody>
+        <tr><td><strong>IPEN/Arnika</strong></td><td>Global POPs Contaminated Sites Map</td><td>70+ toxic sites worldwide</td><td><a href="https://arnika.org/en/news/map-highlights-ongoing-health-threats-from-pops-contaminated-sites-globally" target="_blank">View Map →</a></td></tr>
+        <tr><td><strong>Basel Convention</strong></td><td>Hazardous Waste Management</td><td>Transboundary waste rules</td><td><a href="https://www.basel.int/" target="_blank">View Data →</a></td></tr>
+        <tr><td><strong>UNEP</strong></td><td>Mercury Convention (Minamata)</td><td>Global mercury phase-out</td><td><a href="https://www.mercuryconvention.org/" target="_blank">View Program →</a></td></tr>
+        <tr><td><strong>WHO</strong></td><td>Chemical Safety Database</td><td>Health impacts by chemical</td><td><a href="https://www.who.int/health-topics/chemical-safety" target="_blank">View Data →</a></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="detail-block" style="text-align:center; border-color: var(--green); margin-top: 40px;">
+    <h2>Support Verification</h2>
+    <p style="max-width: 600px; margin: 0 auto 15px auto;">We accept contributions to cover satellite monitoring and legal defense. Public wallets, multisig, on-chain route.</p>
+    <a href="tokens.html" class="btn-primary">View Tokens & Pay →</a>
+  </section>
+</main>
+<footer>
+  <p>Contact: <a href="mailto:ecologyoilgaz@gmail.com">ecologyoilgaz@gmail.com</a> ·
+    <a href="eco-token.html">ECO Token</a> ·
+    <a href="tokens.html">Tokens & Pay</a> ·
+    <a href="treasury.html">Treasury (Solana)</a> ·
+    <a href="methodology.html">Methodology</a>
+  </p>
+</footer>
+<script src="counter.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
