@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Buy €ECO — ECO Impact Token</title>
+    <link rel="icon" href="eco_logo.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <style>
+        /* ===== БАЗОВЫЕ СТИЛИ (Green Tech) ===== */
+        :root {
+            --bg-color: #040906; --text-color: #E0F0E6;
+            --eco-green: #2ECC40; --eco-dark: #1B8A2A;
+            --gold: #FFD700; --glass-bg: rgba(10, 25, 15, 0.6);
+            --glass-border: rgba(46, 204, 64, 0.25);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg-color); color: var(--text-color);
+            line-height: 1.6; padding-top: 80px; padding-bottom: 60px;
+        }
+        body::before {
+            content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(46, 204, 64, 0.05) 0%, transparent 60%);
+            z-index: -1; pointer-events: none;
+        }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        
+        header {
+            position: fixed; top: 0; left: 0; width: 100%;
+            background: rgba(4, 9, 6, 0.9); backdrop-filter: blur(12px);
+            z-index: 100; border-bottom: 1px solid var(--glass-border);
+            padding: 12px 0;
+        }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .logo { display: flex; align-items: center; gap: 8px; }
+        .logo img { height: 36px; width: auto; border-radius: 50%; }
+        .logo-text { font-size: 20px; font-weight: 700; color: #fff; }
+        nav { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+        nav a { color: #8A94C8; text-decoration: none; font-size: 13px; font-weight: 500; transition: 0.3s; }
+        nav a:hover { color: var(--eco-green); }
+        nav a.active { color: var(--eco-green); border-bottom: 2px solid var(--eco-green); }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--eco-green), var(--eco-dark)); color: #040906; padding: 8px 20px;
+            border-radius: 30px; font-weight: 700; text-decoration: none; transition: 0.3s;
+        }
+        .btn-primary:hover { transform: scale(1.02); box-shadow: 0 0 20px rgba(46,204,64,0.4); }
+
+        section { padding: 40px 0; }
+        .section-header { text-align: center; margin-bottom: 40px; }
+        .section-header h1 { font-size: 38px; font-weight: 800; margin-bottom: 12px; color: #fff; }
+        .section-header h1 .highlight { color: var(--eco-green); }
+        .section-header p { color: #8A94C8; max-width: 700px; margin: 0 auto; }
+
+        /* ===== СЕТКА ПОКУПКИ ===== */
+        .buy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 40px; }
+        .buy-card {
+            background: var(--glass-bg); border: 1px solid var(--glass-border);
+            border-radius: 20px; padding: 24px; text-align: center;
+            transition: 0.3s; text-decoration: none; color: var(--text-color);
+            display: flex; flex-direction: column; align-items: center;
+            position: relative; overflow: hidden;
+        }
+        .buy-card::before {
+            content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(46,204,64,0.1) 0%, transparent 70%);
+            opacity: 0; transition: 0.3s; pointer-events: none;
+        }
+        .buy-card:hover::before { opacity: 1; }
+        .buy-card:hover { border-color: var(--eco-green); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(46,204,64,0.15); }
+        .buy-card .icon { font-size: 40px; display: block; margin-bottom: 16px; z-index: 1; }
+        .buy-card .name { font-weight: 700; font-size: 18px; margin-bottom: 6px; z-index: 1; color: #fff; }
+        .buy-card .desc { font-size: 14px; color: #8A94C8; margin-bottom: 16px; z-index: 1; }
+        .buy-card .badge {
+            margin-top: auto; font-size: 11px; text-transform: uppercase; color: var(--eco-green);
+            border: 1px solid var(--glass-border); padding: 4px 12px; border-radius: 20px;
+            background: rgba(46,204,64,0.1); font-weight: 600; z-index: 1;
+        }
+
+        /* ===== АДРЕСА ===== */
+        .address-box {
+            background: rgba(0, 0, 0, 0.4); border: 1px solid var(--glass-border);
+            border-radius: 16px; padding: 20px; margin: 24px 0;
+            text-align: center; font-size: 14px; color: #C0C8F0;
+            font-family: 'Courier New', monospace;
+        }
+        .address-box .label { color: var(--eco-green); font-weight: 600; display: block; margin-bottom: 8px; font-family: 'Segoe UI', sans-serif; }
+        .address-box .addr { color: var(--gold); font-weight: bold; word-break: break-all; }
+        .address-box .copy-btn { background: transparent; border: none; color: var(--eco-green); cursor: pointer; font-size: 16px; margin-left: 8px; transition: 0.2s; }
+        .address-box .copy-btn:hover { color: #fff; transform: scale(1.1); }
+        .address-box .link { color: var(--eco-green); text-decoration: none; font-size: 14px; margin-left: 12px; font-family: 'Segoe UI', sans-serif; }
+        .address-box .link:hover { text-decoration: underline; }
+        
+        .address-box.pool { border-color: var(--gold); background: rgba(255, 215, 0, 0.05); }
+        .address-box.pool .label { color: var(--gold); }
+        .address-box.pool .copy-btn { color: var(--gold); }
+
+        .video-tutorial {
+            max-width: 800px; margin: 30px auto;
+            border-radius: 20px; overflow: hidden;
+            border: 2px solid var(--glass-border);
+            box-shadow: 0 20px 60px rgba(46, 204, 64, 0.15);
+        }
+        .video-tutorial video { width: 100%; display: block; }
+
+        @media (max-width: 768px) {
+            .header-inner { flex-direction: column; align-items: stretch; }
+            nav { justify-content: center; gap: 8px; }
+            nav a { font-size: 11px; }
+            .buy-grid { grid-template-columns: 1fr; }
+            .address-box { font-size: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <div class="logo">
+            <img src="eco_logo.png" alt="€ECO" />
+            <span class="logo-text">ECO IMPACT</span>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="buy.html" class="active">Buy</a>
+            <a href="trade.html">Trade</a>
+            <a href="green-audit.html">Green Audit</a>
+            <a href="rwa-vault.html">RWA Vault</a>
+        </nav>
+        <a href="buy.html" class="btn-primary">Buy €ECO</a>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <div class="section-header">
+            <h1>Buy <span class="highlight">ECO Impact (€ECO)</span></h1>
+            <p>Acquire €ECO directly from the open market. The token is live and trading. Choose your preferred route below.</p>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 30px;">
+            <img src="eco_hero_core.png" alt="€ECO Coin" style="height: 120px; width: 120px; border-radius: 50%; box-shadow: 0 0 40px rgba(46,204,64,0.4); border: 2px solid var(--eco-green);" onerror="this.src='eco_logo.png'" />
+        </div>
+
+        <!-- Сетка покупки (РЕАЛЬНЫЕ ССЫЛКИ) -->
+        <div class="buy-grid">
+            <a href="https://www.geckoterminal.com/solana/pools/CsPQH9ztWxUguvsGRoDJA2TLho1tGMc2cLSGctsbYcWs" target="_blank" class="buy-card" data-tilt data-tilt-max="5">
+                <span class="icon">🌊</span>
+                <span class="name">Meteora DAMM V2</span>
+                <span class="desc">Official €ECO/USDT pool. Best liquidity.</span>
+                <span class="badge">Primary DEX</span>
+            </a>
+            <a href="https://jup.ag/swap/USDT-74Zc9ntjagHLYscczhfk5eWfUjcye8vqBWXWaGpLSnFp" target="_blank" class="buy-card" data-tilt data-tilt-max="5">
+                <span class="icon">🔄</span>
+                <span class="name">Jupiter Aggregator</span>
+                <span class="desc">Find the best price across all Solana DEXs.</span>
+                <span class="badge">Best Price</span>
+            </a>
+            <a href="https://opensea.io/token/solana/74Zc9ntjagHLYscczhfk5eWfUjcye8vqBWXWaGpLSnFp" target="_blank" class="buy-card" data-tilt data-tilt-max="5">
+                <span class="icon">🖼️</span>
+                <span class="name">OpenSea</span>
+                <span class="desc">Buy using credit card or cross-chain assets.</span>
+                <span class="badge">Card / Fiat</span>
+            </a>
+            <a href="https://solscan.io/token/74Zc9ntjagHLYscczhfk5eWfUjcye8vqBWXWaGpLSnFp" target="_blank" class="buy-card" data-tilt data-tilt-max="5">
+                <span class="icon">🔍</span>
+                <span class="name">Solscan Verify</span>
+                <span class="desc">Verify the contract before you trade.</span>
+                <span class="badge">Security</span>
+            </a>
+        </div>
+
+        <!-- Видео-туториал (если есть, пока заглушка) -->
+        <div class="video-tutorial">
+            <video controls playsinline poster="eco_banner.png">
+                <source src="eco_how_to_buy.mp4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+        </div>
+
+        <div class="address-box">
+            <span class="label">📜 Official Contract Address</span>
+            <span class="addr">74Zc9ntjagHLYscczhfk5eWfUjcye8vqBWXWaGpLSnFp</span>
+            <button onclick="navigator.clipboard.writeText('74Zc9ntjagHLYscczhfk5eWfUjcye8vqBWXWaGpLSnFp')" class="copy-btn">📋</button>
+            <a href="https://solscan.io/token/74Zc9ntjagHLYscczhfk5eWfUjcye8vqBWXWaGpLSnFp" target="_blank" class="link">🔍 Solscan</a>
+        </div>
+
+        <div class="address-box pool">
+            <span class="label">🌊 Meteora Pool Address (€ECO/USDT)</span>
+            <span class="addr">CsPQH9ztWxUguvsGRoDJA2TLho1tGMc2cLSGctsbYcWs</span>
+            <button onclick="navigator.clipboard.writeText('CsPQH9ztWxUguvsGRoDJA2TLho1tGMc2cLSGctsbYcWs')" class="copy-btn">📋</button>
+            <a href="https://www.geckoterminal.com/solana/pools/CsPQH9ztWxUguvsGRoDJA2TLho1tGMc2cLSGctsbYcWs" target="_blank" class="link">🔍 GeckoTerminal</a>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="index.html" style="color:var(--eco-green); text-decoration:none; font-weight:600;">← Back to Home</a>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

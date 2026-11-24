@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Green Audit & Token-2022 — ECO Impact</title>
+    <link rel="icon" href="eco_logo.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <style>
+        /* ===== БАЗОВЫЕ СТИЛИ ===== */
+        :root {
+            --bg-color: #040906; --text-color: #E0F0E6;
+            --eco-green: #2ECC40; --eco-dark: #1B8A2A;
+            --gold: #FFD700; --glass-bg: rgba(10, 25, 15, 0.6);
+            --glass-border: rgba(46, 204, 64, 0.25);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg-color); color: var(--text-color);
+            line-height: 1.6; padding-top: 80px; padding-bottom: 60px;
+        }
+        body::before {
+            content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(46, 204, 64, 0.05) 0%, transparent 60%);
+            z-index: -1; pointer-events: none;
+        }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        
+        header {
+            position: fixed; top: 0; left: 0; width: 100%;
+            background: rgba(4, 9, 6, 0.9); backdrop-filter: blur(12px);
+            z-index: 100; border-bottom: 1px solid var(--glass-border);
+            padding: 12px 0;
+        }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .logo { display: flex; align-items: center; gap: 8px; }
+        .logo img { height: 36px; width: auto; border-radius: 50%; }
+        .logo-text { font-size: 20px; font-weight: 700; color: #fff; }
+        nav { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+        nav a { color: #8A94C8; text-decoration: none; font-size: 13px; font-weight: 500; transition: 0.3s; }
+        nav a:hover { color: var(--eco-green); }
+        nav a.active { color: var(--eco-green); border-bottom: 2px solid var(--eco-green); }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--eco-green), var(--eco-dark)); color: #040906; padding: 8px 20px;
+            border-radius: 30px; font-weight: 700; text-decoration: none; transition: 0.3s;
+        }
+        .btn-primary:hover { transform: scale(1.02); box-shadow: 0 0 20px rgba(46,204,64,0.4); }
+
+        section { padding: 40px 0; }
+        .section-header { text-align: center; margin-bottom: 50px; }
+        .section-header h1 { font-size: 38px; font-weight: 800; margin-bottom: 12px; color: #fff; }
+        .section-header h1 .highlight { color: var(--eco-green); }
+        .section-header p { color: #8A94C8; max-width: 700px; margin: 0 auto; }
+
+        /* ===== ДЕТАЛИ ТЕХНОЛОГИИ ===== */
+        .tech-detail-block {
+            display: flex; align-items: center; gap: 40px;
+            background: var(--glass-bg); border: 1px solid var(--glass-border);
+            border-radius: 30px; padding: 40px; margin-bottom: 30px;
+            transition: 0.4s; backdrop-filter: blur(15px);
+            position: relative; overflow: hidden;
+        }
+        .tech-detail-block:hover { border-color: var(--eco-green); box-shadow: 0 0 40px rgba(46,204,64,0.1); transform: translateY(-5px); }
+        
+        .tech-img-container { flex: 0 0 200px; text-align: center; position: relative; z-index: 1; }
+        .tech-img-container img {
+            width: 160px; height: 160px; object-fit: contain;
+            filter: drop-shadow(0 0 25px rgba(46, 204, 64, 0.4));
+            animation: floatImg 6s ease-in-out infinite;
+        }
+        @keyframes floatImg { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+
+        .tech-text { flex: 1; position: relative; z-index: 1; }
+        .tech-text h2 { font-size: 28px; color: #fff; margin-bottom: 16px; }
+        .tech-text h2 .highlight { color: var(--eco-green); }
+        .tech-text p { color: #C0C8F0; font-size: 16px; margin-bottom: 24px; line-height: 1.7; }
+        .tech-features { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .tech-features li { font-size: 15px; color: var(--text-color); display: flex; align-items: center; gap: 10px; }
+        .tech-features li::before { content: '✔'; color: var(--eco-green); font-weight: bold; font-size: 18px; }
+
+        .code-block {
+            background: #020503; border: 1px solid var(--glass-border); border-radius: 16px;
+            padding: 20px; font-family: 'Courier New', monospace; font-size: 13px; color: #8A94C8;
+            overflow-x: auto; margin-bottom: 40px; line-height: 1.5;
+        }
+        .code-block .keyword { color: var(--eco-green); }
+        .code-block .string { color: var(--gold); }
+        .code-block .comment { color: #5A649A; font-style: italic; }
+
+        .back-link { display: inline-block; margin-top: 20px; color: var(--eco-green); text-decoration: none; font-weight: 600; }
+        .back-link:hover { text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            .header-inner { flex-direction: column; align-items: stretch; }
+            nav { justify-content: center; gap: 8px; }
+            nav a { font-size: 11px; }
+            .tech-detail-block { flex-direction: column; text-align: center; padding: 24px; }
+            .tech-features { grid-template-columns: 1fr; text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <div class="logo">
+            <img src="eco_logo.png" alt="€ECO" />
+            <span class="logo-text">ECO IMPACT</span>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="buy.html">Buy</a>
+            <a href="trade.html">Trade</a>
+            <a href="green-audit.html" class="active">Green Audit</a>
+            <a href="rwa-vault.html">RWA Vault</a>
+        </nav>
+        <a href="buy.html" class="btn-primary">Buy €ECO</a>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <div class="section-header">
+            <h1>On-Chain <span class="highlight">Green Audit</span></h1>
+            <p>€ECO is not just an ESG claim. It is a financial computer built on Solana's Token-2022 standard. Here is how the technology enforces transparency.</p>
+        </div>
+
+        <div class="tech-detail-block">
+            <div class="tech-img-container">
+                <img src="eco_green_audit.png" alt="Green Audit" onerror="this.src='eco_logo.png'" />
+            </div>
+            <div class="tech-text">
+                <h2>🍃 <span class="highlight">Transfer Hooks</span> (Token-2022)</h2>
+                <p>
+                    Unlike standard SPL tokens, €ECO uses the <strong>Token-2022 Transfer Hook</strong> extension. This means every single transfer is intercepted by a smart contract that records the transaction's carbon footprint and ensures it complies with our ESG standards. It's an automated, immutable green audit.
+                </p>
+                <ul class="tech-features">
+                    <li>On-chain Carbon Tracking</li>
+                    <li>Anti-Greenwashing Compliance</li>
+                    <li>Institutional Grade Transparency</li>
+                    <li>Immutable Audit Trail</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="tech-detail-block">
+            <div class="tech-img-container">
+                <img src="eco_carbon_offset.png" alt="Carbon Offset" onerror="this.src='eco_logo.png'" />
+            </div>
+            <div class="tech-text">
+                <h2>🌍 <span class="highlight">Carbon Offset</span> Engine</h2>
+                <p>
+                    A portion of the ecosystem's fees is automatically routed to the Carbon Offset Engine. This engine interacts with verified registries (like Verra) to retire carbon credits. By holding €ECO, you are directly contributing to environmental restoration.
+                </p>
+                <ul class="tech-features">
+                    <li>Automated Carbon Credit Purchase</li>
+                    <li>Verified Offsets (Verra/Gold Standard)</li>
+                    <li>Transparent On-Chain Records</li>
+                    <li>Real-World Impact</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Пример кода аудита (показывает прозрачность) -->
+        <div class="section-header" style="margin-top: 40px; margin-bottom: 20px;">
+            <h2>Smart Contract <span class="highlight">Transparency</span></h2>
+        </div>
+        <div class="code-block">
+            <span class="comment">// Simplified snippet of the Token-2022 Transfer Hook</span><br>
+            <span class="keyword">pub fn</span> transfer_hook(ctx: Context&lt;TransferHook&gt;, amount: u64) -> ProgramResult {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// 1. Calculate carbon footprint based on amount</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">let</span> footprint = calculate_carbon(amount);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// 2. Record audit on-chain</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">emit!</span>(GreenAuditEvent {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sender: ctx.accounts.sender.key(),<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;amount: amount,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;carbon_footprint: footprint,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timestamp: Clock::get()?.unix_timestamp,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;});<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// 3. Check if whitelisted (optional compliance)</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;check_compliance(ctx.accounts.sender)?;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Ok(())<br>
+            }
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
