@@ -1,0 +1,399 @@
+{
+  "meta": {"count": 42, "updated": "2026-11-25", "currency": "USD"},
+  "objects": {
+    "khaidarkan-mercury": {
+      "title": "Khaidarkan Mercury Mine — Kyrgyzstan",
+      "country": "Kyrgyzstan", "region": "Central Asia", "lat": 39.93, "lon": 71.33, "status": "red",
+      "claimed": "Transition to sustainable economy",
+      "actual": "World's last primary mercury mine known to export; ~10% of global mercury market; slag and tailings 120–720 ppm Hg; no fences or warning signs [citation:2][citation:14]",
+      "gap": "Legacy contamination; ongoing export",
+      "financial_impact": {"loss_usd": 200000000, "description": "Health and soil contamination", "formula": "Remediation (estimate)"},
+      "solutions": [
+        {"name": "Site remediation", "type": "Long", "effect": "Remove contamination", "cost": "$50M"},
+        {"name": "Alternative employment", "type": "Medium", "effect": "Transition away from mercury", "cost": "$20M"}
+      ],
+      "sources": ["UNEP 2009", "UNEP Global Mercury Partnership"], "companies": ["Khaidarkan Mercury Plant"],
+      "documents": [{"name": "UNEP Technical Assessment", "url": "https://wedocs.unep.org/xmlui/bitstream/handle/20.500.11822/11502/TA_eng.pdf"}]
+    },
+    "mailuu-suu-uranium": {
+      "title": "Mailuu-Suu Uranium Tailings — Kyrgyzstan",
+      "country": "Kyrgyzstan", "region": "Central Asia", "lat": 41.47, "lon": 72.47, "status": "red",
+      "claimed": "Remediation progress",
+      "actual": "23 distinct tailings deposits from Soviet-era uranium mining; landslide-prone valley; release could contaminate Syr-Darya and Fergana Valley [citation:4][citation:10]",
+      "gap": "Transboundary contamination risk",
+      "financial_impact": {"loss_usd": 500000000, "description": "Water and soil contamination risk", "formula": "Remediation (estimate)"},
+      "solutions": [
+        {"name": "Tailings stabilization", "type": "Medium", "effect": "Prevent landslides", "cost": "$50M"},
+        {"name": "Early warning system", "type": "Fast", "effect": "Detect emergencies", "cost": "$5M"}
+      ],
+      "sources": ["Taylor & Francis 2026", "UNDP 2025"], "companies": ["Government of Kyrgyzstan"],
+      "documents": [{"name": "UNDP Press Release", "url": "https://www.undp.org/kyrgyzstan/press-releases/eu-and-undp-strengthen-emergency-preparedness-uranium-legacy-areas"}]
+    },
+    "fergana-pesticides": {
+      "title": "Fergana Valley Pesticide Stockpiles — Uzbekistan",
+      "country": "Uzbekistan", "region": "Central Asia", "lat": 40.38, "lon": 71.78, "status": "red",
+      "claimed": "Managed waste",
+      "actual": "Legacy pesticide stockpiles from Soviet cotton era; contamination of soil and water [citation:1][citation:13]",
+      "gap": "Legacy contamination",
+      "financial_impact": {"loss_usd": 100000000, "description": "Health and soil damage", "formula": "Remediation (estimate)"},
+      "solutions": [
+        {"name": "Inventory and disposal", "type": "Medium", "effect": "Remove toxins", "cost": "$40M"},
+        {"name": "Soil remediation", "type": "Long", "effect": "Restore land", "cost": "$30M"}
+      ],
+      "sources": ["UNEP 2013", "FAO"], "companies": ["Various"],
+      "documents": []
+    },
+    "chimkent-phosphogypsum": {
+      "title": "Chimkent Phosphogypsum Stacks — Kazakhstan",
+      "country": "Kazakhstan", "region": "Central Asia", "lat": 42.32, "lon": 69.59, "status": "red",
+      "claimed": "Managed waste",
+      "actual": "Phosphogypsum stacks; fluoride and heavy metal contamination [citation:1]",
+      "gap": "Legacy waste",
+      "financial_impact": {"loss_usd": 300000000, "description": "Soil and water contamination", "formula": "Remediation (estimate)"},
+      "solutions": [
+        {"name": "Stack capping", "type": "Fast", "effect": "Prevent dust", "cost": "$20M"},
+        {"name": "Phosphogypsum recycling", "type": "Medium", "effect": "Reuse waste", "cost": "$60M"}
+      ],
+      "sources": ["UNEP 2013"], "companies": ["Kazphosphate"],
+      "documents": []
+    },
+    "tajikistan-pesticides": {
+      "title": "Obsolete Pesticides — Tajikistan",
+      "country": "Tajikistan", "region": "Central Asia", "lat": 37.85, "lon": 68.78, "status": "red",
+      "claimed": "Cleanup ongoing",
+      "actual": "~200 mini-landfills with obsolete pesticides; 5.5 t pesticides + 537 t contaminated soil removed in Namuna (2026) [citation:7]",
+      "gap": "Legacy contamination",
+      "financial_impact": {"loss_usd": 150000000, "description": "Health and soil", "formula": "Remediation (estimate)"},
+      "solutions": [
+        {"name": "Inventory and remediation", "type": "Long", "effect": "Remove toxins", "cost": "$100M"}
+      ],
+      "sources": ["Khovar 2026", "FAO"], "companies": ["Peshsaf"],
+      "documents": []
+    },
+    "turkmenistan-toxic-gap": {
+      "title": "Toxic Sites Data Gap — Turkmenistan",
+      "country": "Turkmenistan", "region": "Central Asia", "lat": 37.95, "lon": 58.38, "status": "red",
+      "claimed": "Not disclosed",
+      "actual": "No public data on toxic or hazardous sites; opacity is a gap in itself",
+      "gap": "Data scarcity",
+      "financial_impact": {"loss_usd": 50000000, "description": "Health cost (low confidence)", "formula": "Estimate"},
+      "solutions": [
+        {"name": "Public inventory", "type": "Fast", "effect": "Transparency", "cost": "$5M"}
+      ],
+      "sources": ["EcoAudit CA"], "companies": ["Government of Turkmenistan"],
+      "documents": []
+    },
+    "pavlodar-mercury": {
+      "title": "Pavlodar Mercury Contamination — Kazakhstan",
+      "country": "Kazakhstan", "region": "Central Asia", "lat": 52.29, "lon": 76.95, "status": "red",
+      "claimed": "Cleanup ongoing",
+      "actual": "Mercury contamination from chlor-alkali production; cleanup underway [citation:1]",
+      "gap": "Legacy contamination",
+      "financial_impact": {"loss_usd": 200000000, "description": "Health and soil", "formula": "Remediation (estimate)"},
+      "solutions": [
+        {"name": "Soil remediation", "type": "Long", "effect": "Remove mercury", "cost": "$80M"}
+      ],
+      "sources": ["UNEP 2013"], "companies": ["Various"],
+      "documents": []
+    },
+    "temirtau-mercury": {
+      "title": "Temirtau Mercury Contamination — Kazakhstan",
+      "country": "Kazakhstan", "region": "Central Asia", "lat": 50.05, "lon": 72.95, "status": "red",
+      "claimed": "Cleanup ongoing",
+      "actual": "Mercury contamination from chlor-alkali production; cleanup underway [citation:1]",
+      "gap": "Legacy contamination",
+      "financial_impact": {"loss_usd": 150000000, "description": "Health and soil", "formula": "Remediation (estimate)"},
+      "solutions": [
+        {"name": "Soil remediation", "type": "Long", "effect": "Remove mercury", "cost": "$60M"}
+      ],
+      "sources": ["UNEP 2013"], "companies": ["Various"],
+      "documents": []
+    },
+    "chauvay-mercury": {
+      "title": "Chauvay Mercury Mine — Kyrgyzstan",
+      "country": "Kyrgyzstan", "region": "Central Asia", "lat": 40.12, "lon": 72.20, "status": "red",
+      "claimed": "Abandoned",
+      "actual": "1 million tonnes of waste in flood-prone valley; Hg 270–550 ppm; Sb 5,100–5,500 ppm; no fences [citation:14]",
+      "gap": "Uncontained waste",
+      "financial_impact": {"loss_usd": 100000000, "description": "Health and water contamination", "formula": "Remediation (estimate)"},
+      "solutions": [
+        {"name": "Waste containment", "type": "Medium", "effect": "Prevent erosion", "cost": "$30M"}
+      ],
+      "sources": ["UNEP 2009"], "companies": ["Government of Kyrgyzstan"],
+      "documents": []
+    },
+    "min-kush-uranium": {
+      "title": "Min-Kush Uranium Tailings — Kyrgyzstan",
+      "country": "Kyrgyzstan", "region": "Central Asia", "lat": 41.75, "lon": 74.50, "status": "red",
+      "claimed": "Remediation planned",
+      "actual": "Uranium legacy site; high-risk location for radioactive contamination [citation:10]",
+      "gap": "Radioactive risk",
+      "financial_impact": {"loss_usd": 200000000, "description": "Water contamination risk", "formula": "Remediation (estimate)"},
+      "solutions": [
+        {"name": "Tailings stabilization", "type": "Medium", "effect": "Prevent release", "cost": "$40M"}
+      ],
+      "sources": ["UNDP 2025"], "companies": ["Government of Kyrgyzstan"],
+      "documents": []
+    },
+    "kyzyl-jar-uranium": {
+      "title": "Kyzyl-Jar Uranium Tailings — Kyrgyzstan",
+      "country": "Kyrgyzstan", "region": "Central Asia", "lat": 41.50, "lon": 72.00, "status": "red",
+      "claimed": "Remediation planned",
+      "actual": "Uranium legacy site; high-risk location for radioactive contamination [citation:10]",
+      "gap": "Radioactive risk",
+      "financial_impact": {"loss_usd": 150000000, "description": "Water contamination risk", "formula": "Remediation (estimate)"},
+      "solutions": [
+        {"name": "Tailings stabilization", "type": "Medium", "effect": "Prevent release", "cost": "$30M"}
+      ],
+      "sources": ["UNDP 2025"], "companies": ["Government of Kyrgyzstan"],
+      "documents": []
+    },
+    "china-pops": {
+      "title": "POPs Contaminated Sites — China",
+      "country": "China", "region": "Asia", "lat": 35.0, "lon": 105.0, "status": "red",
+      "claimed": "Stockholm Convention compliance",
+      "actual": "Multiple POPs sites from pesticide production and industrial activity [citation:5]",
+      "gap": "Legacy contamination",
+      "financial_impact": {"loss_usd": 5000000000, "description": "Health and environment", "formula": "Remediation (estimate)"},
+      "solutions": [
+        {"name": "Site remediation", "type": "Long", "effect": "Remove POPs", "cost": "$2B"}
+      ],
+      "sources": ["IPEN/Arnika 2025"], "companies": ["Various"],
+      "documents": [{"name": "IPEN Global Map", "url": "https://arnika.org/en/news/map-highlights-ongoing-health-threats-from-pops-contaminated-sites-globally"}]
+    },
+    "india-pops": {
+      "title": "POPs Contaminated Sites — India",
+      "country": "India", "region": "Asia", "lat": 20.59, "lon": 78.96, "status": "red",
+      "claimed": "Stockholm Convention compliance",
+      "actual": "POPs sites from pesticide production and industrial activity [citation:5]",
+      "gap": "Legacy contamination",
+      "financial_impact": {"loss_usd": 3000000000, "description": "Health and environment", "formula": "Remediation (estimate)"},
+      "solutions": [
+        {"name": "Site remediation", "type": "Long", "effect": "Remove POPs", "cost": "$1B"}
+      ],
+      "sources": ["IPEN/Arnika 2025"], "companies": ["Various"],
+      "documents": []
+    },
+    "usa-pfas": {
+      "title": "PFAS Contamination — USA",
+      "country": "USA", "region": "North America", "lat": 38.9, "lon": -77.0, "status": "red",
+      "claimed": "PFAS regulation",
+      "actual": "57,412 presumptive contamination sites; 49,145 industrial/military sites [citation:15]",
+      "gap": "Widespread contamination",
+      "financial_impact": {"loss_usd": 50000000000, "description": "Health and cleanup", "formula": "Remediation (estimate)"},
+      "solutions": [
+        {"name": "PFAS filtration", "type": "Medium", "effect": "Clean water", "cost": "$10B"}
+      ],
+      "sources": ["Forever Pollution Project 2026"], "companies": ["Various"],
+      "documents": []
+    },
+    "europe-pfas": {
+      "title": "PFAS Contamination — Europe",
+      "country": "European Union", "region": "Europe", "lat": 50.8, "lon": 4.4, "status": "red",
+      "claimed": "EU PFAS restriction",
+      "actual": "22,934 known contamination sites; 20 PFAS manufacturing facilities; 21,426 presumptive sites [citation:15]",
+      "gap": "Widespread contamination",
+      "financial_impact": {"loss_usd": 30000000000, "description": "Health and cleanup", "formula": "Remediation (estimate)"},
+      "solutions": [
+        {"name": "PFAS filtration", "type": "Medium", "effect": "Clean water", "cost": "$5B"}
+      ],
+      "sources": ["Forever Pollution Project 2026"], "companies": ["3M et al."],
+      "documents": []
+    },
+    "belgium-3m-pfas": {
+      "title": "3M PFAS Contamination — Antwerp, Belgium",
+      "country": "Belgium", "region": "Europe", "lat": 51.22, "lon": 4.40, "status": "red",
+      "claimed": "Production site",
+      "actual": "PFAS pollution of air, groundwater, farms; all screened residents had PFAS in blood [citation:5]",
+      "gap": "Widespread contamination",
+      "financial_impact": {"loss_usd": 500000000, "description": "Health and cleanup", "formula": "PFAS remediation"},
+      "solutions": [
+        {"name": "PFAS filtration", "type": "Medium", "effect": "Clean water", "cost": "$200M"}
+      ],
+      "sources": ["IPEN/Arnika 2025"], "companies": ["3M"],
+      "documents": []
+    },
+    "czech-pops": {
+      "title": "POPs Contaminated Sites — Czech Republic",
+      "country": "Czech Republic", "region": "Europe", "lat": 50.08, "lon": 14.44, "status": "red",
+      "claimed": "EU compliance",
+      "actual": "PCB in Labe sediments (Ústí nad Labem); Spolchemie site; Lhotka tailings (Pardubice) [citation:5]",
+      "gap": "Legacy contamination",
+      "financial_impact": {"loss_usd": 300000000, "description": "Health and environment", "formula": "Remediation (estimate)"},
+      "solutions": [
+        {"name": "Sediment remediation", "type": "Long", "effect": "Remove PCBs", "cost": "$100M"}
+      ],
+      "sources": ["Arnika 2025"], "companies": ["Spolchemie", "Synthesia"],
+      "documents": [{"name": "Arnika Report", "url": "https://arnika.org/o-nas/tiskove-zpravy/celosvetova-mapa-odhaluje-skryta-ohniska-kontaminace-nebezpecnymi-chemickymi-latkami-ceska-republika-neni-vyjimkou"}]
+    },
+    "germany-pfas": {
+      "title": "PFAS Contamination — Germany",
+      "country": "Germany", "region": "Europe", "lat": 51.2, "lon": 10.4, "status": "red",
+      "claimed": "EU PFAS restriction",
+      "actual": "Leimersheim surface water: 35 ng/l PFAS; multiple presumptive sites [citation:15]",
+      "gap": "Widespread contamination",
+      "financial_impact": {"loss_usd": 2000000000, "description": "Health and cleanup", "formula": "Remediation (estimate)"},
+      "solutions": [
+        {"name": "PFAS filtration", "type": "Medium", "effect": "Clean water", "cost": "$500M"}
+      ],
+      "sources": ["Forever Pollution Project 2026"], "companies": ["Various"],
+      "documents": []
+    },
+    "netherlands-pfas": {
+      "title": "PFAS Contamination — Netherlands",
+      "country": "Netherlands", "region": "Europe", "lat": 52.13, "lon": 5.29, "status": "red",
+      "claimed": "PFAS restriction",
+      "actual": "Multiple PFAS contamination sites; Chemours/DuPont legacy [citation:15]",
+      "gap": "Widespread contamination",
+      "financial_impact": {"loss_usd": 1500000000, "description": "Health and cleanup", "formula": "Remediation (estimate)"},
+      "solutions": [
+        {"name": "PFAS filtration", "type": "Medium", "effect": "Clean water", "cost": "$400M"}
+      ],
+      "sources": ["Forever Pollution Project 2026"], "companies": ["Chemours"],
+      "documents": []
+    },
+    "japan-pfas": {
+      "title": "PFAS Contamination — Japan",
+      "country": "Japan", "region": "Asia", "lat": 36.2, "lon": 138.25, "status": "red",
+      "claimed": "PFAS regulation",
+      "actual": "PFAS contamination near US military bases and industrial sites [citation:15]",
+      "gap": "Widespread contamination",
+      "financial_impact": {"loss_usd": 2000000000, "description": "Health and cleanup", "formula": "Remediation (estimate)"},
+      "solutions": [
+        {"name": "PFAS filtration", "type": "Medium", "effect": "Clean water", "cost": "$500M"}
+      ],
+      "sources": ["Forever Pollution Project 2026"], "companies": ["Various"],
+      "documents": []
+    },
+    "australia-pfas": {
+      "title": "PFAS Contamination — Australia",
+      "country": "Australia", "region": "Oceania", "lat": -25.27, "lon": 133.78, "status": "red",
+      "claimed": "PFAS management",
+      "actual": "PFAS contamination from firefighting foam at military and airport sites [citation:15]",
+      "gap": "Widespread contamination",
+      "financial_impact": {"loss_usd": 1000000000, "description": "Health and cleanup", "formula": "Remediation (estimate)"},
+      "solutions": [
+        {"name": "PFAS filtration", "type": "Medium", "effect": "Clean water", "cost": "$300M"}
+      ],
+      "sources": ["Forever Pollution Project 2026"], "companies": ["Various"],
+      "documents": []
+    },
+    "canada-pfas": {
+      "title": "PFAS Contamination — Canada",
+      "country": "Canada", "region": "North America", "lat": 56.13, "lon": -106.35, "status": "red",
+      "claimed": "PFAS regulation",
+      "actual": "PFAS contamination near industrial sites and military bases [citation:15]",
+      "gap": "Widespread contamination",
+      "financial_impact": {"loss_usd": 1500000000, "description": "Health and cleanup", "formula": "Remediation (estimate)"},
+      "solutions": [
+        {"name": "PFAS filtration", "type": "Medium", "effect": "Clean water", "cost": "$400M"}
+      ],
+      "sources": ["Forever Pollution Project 2026"], "companies": ["Various"],
+      "documents": []
+    },
+    "uk-pfas": {
+      "title": "PFAS Contamination — UK",
+      "country": "UK", "region": "Europe", "lat": 55.38, "lon": -3.44, "status": "red",
+      "claimed": "PFAS management",
+      "actual": "PFAS contamination from industrial and military sites [citation:15]",
+      "gap": "Widespread contamination",
+      "financial_impact": {"loss_usd": 1000000000, "description": "Health and cleanup", "formula": "Remediation (estimate)"},
+      "solutions": [
+        {"name": "PFAS filtration", "type": "Medium", "effect": "Clean water", "cost": "$300M"}
+      ],
+      "sources": ["Forever Pollution Project 2026"], "companies": ["Various"],
+      "documents": []
+    },
+    "italy-pfas": {
+      "title": "PFAS Contamination — Italy",
+      "country": "Italy", "region": "Europe", "lat": 41.87, "lon": 12.57, "status": "red",
+      "claimed": "PFAS management",
+      "actual": "PFAS contamination in Veneto region from industrial site [citation:15]",
+      "gap": "Widespread contamination",
+      "financial_impact": {"loss_usd": 800000000, "description": "Health and cleanup", "formula": "Remediation (estimate)"},
+      "solutions": [
+        {"name": "PFAS filtration", "type": "Medium", "effect": "Clean water", "cost": "$200M"}
+      ],
+      "sources": ["Forever Pollution Project 2026"], "companies": ["Miteni"],
+      "documents": []
+    },
+    "spain-pfas": {
+      "title": "PFAS Contamination — Spain",
+      "country": "Spain", "region": "Europe", "lat": 40.46, "lon": -3.75, "status": "red",
+      "claimed": "PFAS management",
+      "actual": "PFAS contamination from industrial sites [citation:15]",
+      "gap": "Widespread contamination",
+      "financial_impact": {"loss_usd": 500000000, "description": "Health and cleanup", "formula": "Remediation (estimate)"},
+      "solutions": [
+        {"name": "PFAS filtration", "type": "Medium", "effect": "Clean water", "cost": "$150M"}
+      ],
+      "sources": ["Forever Pollution Project 2026"], "companies": ["Various"],
+      "documents": []
+    },
+    "poland-pfas": {
+      "title": "PFAS Contamination — Poland",
+      "country": "Poland", "region": "Europe", "lat": 51.92, "lon": 19.15, "status": "red",
+      "claimed": "PFAS management",
+      "actual": "PFAS contamination from industrial sites [citation:15]",
+      "gap": "Widespread contamination",
+      "financial_impact": {"loss_usd": 500000000, "description": "Health and cleanup", "formula": "Remediation (estimate)"},
+      "solutions": [
+        {"name": "PFAS filtration", "type": "Medium", "effect": "Clean water", "cost": "$150M"}
+      ],
+      "sources": ["Forever Pollution Project 2026"], "companies": ["Various"],
+      "documents": []
+    },
+    "global-pops": {
+      "title": "Global POPs Contaminated Sites — 70+ Mapped",
+      "country": "Global", "region": "Global", "lat": 0, "lon": 0, "status": "red",
+      "claimed": "Stockholm Convention",
+      "actual": "70+ mapped sites; tens of thousands estimated globally; POPs enter food chain [citation:5]",
+      "gap": "Unremediated legacy contamination",
+      "financial_impact": {"loss_usd": 50000000000, "description": "Global health and cleanup", "formula": "Aggregate remediation estimate"},
+      "solutions": [
+        {"name": "Global remediation fund", "type": "Long", "effect": "Clean up priority sites", "cost": "$10B"}
+      ],
+      "sources": ["IPEN/Arnika 2025"], "companies": ["Various"],
+      "documents": [{"name": "IPEN Global Map", "url": "https://arnika.org/en/news/map-highlights-ongoing-health-threats-from-pops-contaminated-sites-globally"}]
+    },
+    "global-pfas": {
+      "title": "Global PFAS Contamination — 57,000+ Sites",
+      "country": "Global", "region": "Global", "lat": 0, "lon": 0, "status": "red",
+      "claimed": "PFAS regulation",
+      "actual": "57,412 presumptive contamination sites in US alone; 22,934 in Europe; PFAS linked to cancer, liver damage, immune suppression [citation:15]",
+      "gap": "Widespread contamination",
+      "financial_impact": {"loss_usd": 100000000000, "description": "Global health and cleanup", "formula": "Aggregate remediation estimate"},
+      "solutions": [
+        {"name": "PFAS filtration", "type": "Medium", "effect": "Clean water", "cost": "$20B"}
+      ],
+      "sources": ["Forever Pollution Project 2026"], "companies": ["3M, Chemours et al."],
+      "documents": []
+    },
+    "global-mercury": {
+      "title": "Global Mercury Contamination",
+      "country": "Global", "region": "Global", "lat": 0, "lon": 0, "status": "red",
+      "claimed": "Minamata Convention",
+      "actual": "Mercury from artisanal mining, chlor-alkali, and legacy sites; linked to neurological damage [citation:1][citation:2]",
+      "gap": "Widespread contamination",
+      "financial_impact": {"loss_usd": 30000000000, "description": "Global health and cleanup", "formula": "Aggregate estimate"},
+      "solutions": [
+        {"name": "Mercury phase-out", "type": "Long", "effect": "Stop new contamination", "cost": "$5B"}
+      ],
+      "sources": ["UNEP", "Minamata Convention"], "companies": ["Various"],
+      "documents": []
+    },
+    "global-uranium-tailings": {
+      "title": "Global Uranium Tailings — Risk",
+      "country": "Global", "region": "Global", "lat": 0, "lon": 0, "status": "red",
+      "claimed": "Safety standards",
+      "actual": "Recurrent catastrophic failures; liquefaction risk; radioactive contamination [citation:4][citation:10]",
+      "gap": "Weak regulatory enforcement",
+      "financial_impact": {"loss_usd": 30000000000, "description": "Dam failure consequences", "formula": "Historical failure costs"},
+      "solutions": [
+        {"name": "Independent dam monitoring", "type": "Fast", "effect": "Early warning", "cost": "$1B"}
+      ],
+      "sources": ["UNDP 2025"], "companies": ["Various"],
+      "documents": []
+    }
+  }
+}
